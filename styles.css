@@ -1,0 +1,235 @@
+body {
+    font-family: 'Fira Mono', 'Consolas', 'Courier New', monospace;
+    background-image: linear-gradient(45deg, #eeeeee, rgb(146, 51, 168));
+    min-height: 100vh;
+    margin: 0;
+}
+
+header {
+    background-image: linear-gradient(45deg, #000000, rgb(146, 51, 168));
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between; /* Pushes the headButtons to the right */
+    align-items: center; /* Vertically aligns the items */
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+
+
+.headButtons {
+    display: flex;
+    gap: 1rem; /* Creates space between buttons */
+    margin-left: 30rem; /* Add this line or increase the value */
+}
+
+.headButton {
+    padding: 0.5rem 1rem;
+    font-size: 2.0ch;
+    border: none;
+    background: none;
+    font-weight: bold;
+    cursor: pointer; /* Change cursor on hover */
+    color: #ffffff; /* A dark gray text color */
+    transition: color 0.3s ease; /* Smooth color transition */
+
+}
+
+.headButton:hover {
+    color: rgb(146, 51, 168);
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+
+
+main {
+    max-width: 800px; /* Constrains the main content width */
+    margin: 2rem auto; /* Centers the main content with top/bottom margin */
+    padding: 1rem;
+}
+
+h1 {
+    font-size: 6.5rem;
+    font-weight: 700;
+    margin-bottom: 4rem;
+    color: #f6f4ed; /* A dark color for the main heading */
+    text-align: center;
+}
+
+article {
+    background-color: #ffffff; /* White background for the article card */
+    padding: 5rem;
+    border-radius: 8px; /* Rounded corners for the card */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for a card-like effect */
+    margin-top: 3rem; /* Reduced from 8cm to 2rem */
+    margin-bottom: 3rem; /* Reduced from 8cm to 2rem */
+}
+
+
+.header-text {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #fafafa;
+    white-space: nowrap; /* Prevent line break */
+}
+
+
+p {
+    line-height: 1.6; /* Improves readability of paragraphs */
+    color: #4a5568;
+    margin-bottom: 1rem;
+}
+
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: stretch;
+    margin-top: 5rem;
+}
+
+.project-image {
+    width: 100%;
+    height: 120px;
+    background: linear-gradient(135deg, #eee, #b6a1e2);
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.project-card, .projects-grid a {
+    display: block;
+    width: 300px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    text-decoration: none;
+    color: inherit;
+    transition: box-shadow 0.2s, transform 0.2s;
+    border: 1px solid #e0e0e0;
+}
+
+.project-card:hover, .projects-grid a:hover {
+    box-shadow: 0 8px 24px rgba(146,51,168,0.18);
+    transform: translateY(-4px) scale(1.03);
+    border-color: #9233a8;
+}
+
+.project-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.project-content h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.3rem;
+    color: #9233a8;
+}
+
+.project-content p {
+    margin: 0;
+    color: #444;
+    font-size: 1rem;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 1.5rem;
+  z-index: 10;
+}
+.hamburger span {
+  display: block;
+  width: 28px;
+  height: 4px;
+  margin: 3px 0;
+  background: #fafafa;
+  border-radius: 2px;
+  transition: all 0.3s cubic-bezier(.4,2,.6,1);
+  margin-left: 8rem;
+}
+
+@media (max-width: 700px) {
+  .headButtons {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+}
+
+.skills-list {
+    display: inline-block;
+    
+}
+
+.skills-list > div {
+    margin-bottom: 4rem; /* Adds space between each skill container */
+}
+
+/* Progress Bar Styles */
+
+.progress-container {
+    position: relative;
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 20px;
+    height: 20px;
+    margin-top: 0.5rem;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #aa56bd;
+    border-radius: 20px 0 0 20px;
+    transition: width 0.6s ease-in-out;
+}
+
+.progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:#601056;
+    font-weight: bold;
+    font-family: sans-serif;
+    z-index: 2;
+}
+
+/* Cursor Animation */
+
+.crt-cursor {
+    display: inline-block;
+    width: 0.7ch;
+    height: 1.2em;
+    background: #fafafa;
+    margin-left: 0.2ch;
+    vertical-align: bottom;
+    animation: blink-cursor 1s steps(1) infinite;
+}
+
+@keyframes blink-cursor {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
