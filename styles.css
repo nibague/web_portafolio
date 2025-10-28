@@ -19,13 +19,10 @@ header {
     margin: 0 auto;
 }
 
-
-
-
 .headButtons {
     display: flex;
     gap: 1rem; /* Creates space between buttons */
-    margin-left: 30rem; /* Add this line or increase the value */
+    margin-left: 20rem; /* Add this line or increase the value */
 }
 
 .headButton {
